@@ -1,12 +1,12 @@
 #include <iostream>
 #include "operation.h"
 
-enum OPERATOR { PLUS = 1, MINUS, MULTIPLY };
+enum OPERATOR { PLUS = 1, MINUS, MULTIPLY, DIVISION, PROPOTION};
 
 int main(int argc, char* argv[])
 {
 	int oper,val1,val2;
-	int result;
+	int result=0;
 
 	do {
 		std::cout << "-----------------------------------" << std::endl;
@@ -25,13 +25,19 @@ int main(int argc, char* argv[])
 
 		switch (oper) {
 		case PLUS :
-			operation::sum(val1, val2, result);
+			operation::sum(val1, val2, &result);
 			break;
 		case MINUS:
-			operation::sub(val1, val2, result);
+			operation::sub(val1, val2, &result);
 			break;
 		case MULTIPLY:
-			operation::multiply(val1, val2, result);
+			operation::multiply(val1, val2, &result);
+			break;
+		case DIVISION:
+			operation::div(val1, val2, &result); 
+			break;
+		case PROPOTION:
+			operation::proportion(val1, val2, &result);
 			break;
 		}
 
