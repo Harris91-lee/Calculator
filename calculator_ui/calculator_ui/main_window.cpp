@@ -97,10 +97,12 @@ void MainWindow::on_pushButton_minus_clicked()
 
 void MainWindow::on_pushButton_equal_clicked()
 {
+	double result = 0.0;
 	double val = ui.lineEdit->text().toDouble();
 	value.push_back(val);
 
 	//calculat
 
-	ui.lineEdit->clear();
+
+	ui.lineEdit->setText(QString("%1").arg(result));
 }
