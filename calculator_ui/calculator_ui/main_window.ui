@@ -30,7 +30,7 @@
     <item row="1" column="0">
      <layout class="QGridLayout" name="gridLayout">
       <item row="5" column="1">
-       <widget class="QPushButton" name="pushButton_10">
+       <widget class="QPushButton" name="pushButton_zero">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
