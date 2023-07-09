@@ -1,4 +1,5 @@
 #include "main_window.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -70,4 +71,36 @@ void MainWindow::on_pushButton_zero_clicked()
 {
 	cur_text += '0';
 	ui.lineEdit->setText(cur_text);
+}
+
+void MainWindow::on_pushButton_plus_clicked()
+{
+	oper.push_back(PLUS);
+
+	double val = ui.lineEdit->text().toDouble();
+	value.push_back(val);
+
+	ui.lineEdit->clear();
+	cur_text.clear();
+}
+
+void MainWindow::on_pushButton_minus_clicked()
+{
+	oper.push_back(MINUS);
+
+	double val = ui.lineEdit->text().toDouble();
+	value.push_back(val);
+
+	ui.lineEdit->clear();
+	cur_text.clear();
+}
+
+void MainWindow::on_pushButton_equal_clicked()
+{
+	double val = ui.lineEdit->text().toDouble();
+	value.push_back(val);
+
+	//calculat
+
+	ui.lineEdit->clear();
 }
