@@ -101,8 +101,33 @@ void MainWindow::on_pushButton_equal_clicked()
 	double val = ui.lineEdit->text().toDouble();
 	value.push_back(val);
 
-	//calculat
+	double temp;
+	for (int i = 0; i < oper.size(); i++)
+	{
+		if (i == 0) {
+			temp = value[0];
+		}
 
+		switch (oper[i]) {
+		case PLUS:
+			temp += value[i + 1];
+			break;
+		case MINUS:
+			temp -= value[i + 1];
+			break;
+		}
+		/*
+		if (oper[i] == OPERATOR::PLUS) {
+			temp =+ vaule[i+1];
+		}
+		else if (oper[i] == OPERATOR::MINUS) {
+			temp =- value[i+1];
+		}
+		*/
+	}
+
+	//cavalculat
+	//result = value[0]
 
 	ui.lineEdit->setText(QString("%1").arg(result));
 }
