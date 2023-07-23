@@ -2,7 +2,7 @@
 #include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
-	: QMainWindow(parent)
+	: QMainWindow(parent), result(0.0)
 {
 	ui.setupUi(this);
 
@@ -118,11 +118,11 @@ void MainWindow::on_pushButton_clear_clicked() {
 	cur_text.clear();
 	value.clear();
 	ui.lineEdit->clear();
+	result = 0.0;
 }
 
 void MainWindow::on_pushButton_equal_clicked()
 {
-	double result = 0.0;
 	double val = ui.lineEdit->text().toDouble();
 	value.push_back(val);
 
@@ -141,6 +141,11 @@ void MainWindow::on_pushButton_equal_clicked()
 		case CLEAR:result = 0;break;
 		}
 	}
+	
+	//clear value
+	oper.clear();
+	cur_text.clear();
+	value.clear();
 
 	ui.lineEdit->setText(QString("%1").arg(result));
 }

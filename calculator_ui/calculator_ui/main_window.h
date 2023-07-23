@@ -4,7 +4,6 @@
 #include "ui_main_window.h"
 #include <vector>
 
-//enum OPERATOR { PLUS, MINUS };
 enum OPERATOR { PLUS, MINUS, MULTIPLY, DIVIDE, CLEAR };
 
 class MainWindow : public QMainWindow
@@ -21,6 +20,7 @@ private:
 	QString cur_text;
 	std::vector<double> value;
 	std::vector<OPERATOR> oper;
+	double result;
 
 private slots:
 	void on_pushButton_one_clicked();
