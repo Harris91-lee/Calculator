@@ -4,7 +4,8 @@
 #include "ui_main_window.h"
 #include <vector>
 
-enum OPERATOR{PLUS,MINUS};
+//enum OPERATOR { PLUS, MINUS };
+enum OPERATOR { PLUS, MINUS, MULTIPLY, DIVIDE, CLEAR };
 
 class MainWindow : public QMainWindow
 {
@@ -32,8 +33,11 @@ private slots:
 	void on_pushButton_eight_clicked();
 	void on_pushButton_nine_clicked();
 	void on_pushButton_zero_clicked();
-
+	// operations:
 	void on_pushButton_plus_clicked();
 	void on_pushButton_equal_clicked();
 	void on_pushButton_minus_clicked();
+	void on_pushButton_multiply_clicked();
+	void on_pushButton_divide_clicked();
+	void on_pushButton_clear_clicked();
 };

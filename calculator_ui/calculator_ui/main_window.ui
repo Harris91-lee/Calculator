@@ -87,7 +87,7 @@
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QPushButton" name="pushButton_division">
+       <widget class="QPushButton" name="pushButton_divide">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -182,7 +182,7 @@
        </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QPushButton" name="pushButton_multiple">
+       <widget class="QPushButton" name="pushButton_multiply">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -429,7 +429,7 @@
        </widget>
       </item>
       <item row="0" column="0" colspan="3">
-       <widget class="QPushButton" name="pushButton_cancel">
+       <widget class="QPushButton" name="pushButton_clear">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -466,7 +466,7 @@
      <x>0</x>
      <y>0</y>
      <width>417</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

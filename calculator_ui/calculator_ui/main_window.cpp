@@ -95,6 +95,31 @@ void MainWindow::on_pushButton_minus_clicked()
 	cur_text.clear();
 }
 
+void MainWindow::on_pushButton_multiply_clicked()
+{
+	oper.push_back(MULTIPLY);
+	double val = ui.lineEdit->text().toDouble();
+	value.push_back(val);
+	ui.lineEdit->clear();
+	cur_text.clear();
+}
+
+void MainWindow::on_pushButton_divide_clicked()
+{
+	oper.push_back(DIVIDE);
+	double val = ui.lineEdit->text().toDouble();
+	value.push_back(val);
+	ui.lineEdit->clear();
+	cur_text.clear();
+}
+
+void MainWindow::on_pushButton_clear_clicked() {
+	oper.clear();
+	cur_text.clear();
+	value.clear();
+	ui.lineEdit->clear();
+}
+
 void MainWindow::on_pushButton_equal_clicked()
 {
 	double result = 0.0;
@@ -111,6 +136,9 @@ void MainWindow::on_pushButton_equal_clicked()
 		switch (oper[i]) {
 		case PLUS:result += value[i + 1];break;
 		case MINUS:result -= value[i + 1];break;
+		case MULTIPLY:result *= value[i + 1];break;
+		case DIVIDE:result /= value[i + 1];break;
+		case CLEAR:result = 0;break;
 		}
 	}
 
