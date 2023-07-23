@@ -77,6 +77,11 @@ void MainWindow:: on_pushButton_dot_clicked()
 	cur_text += '.';
 	ui.lineEdit->setText(cur_text);
 }
+void MainWindow::on_pushButton_signMinus_clicked() 
+{
+	cur_text += '-';
+	ui.lineEdit->setText(cur_text);
+}
 
 void MainWindow::on_pushButton_plus_clicked()
 {
