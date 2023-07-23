@@ -2,7 +2,7 @@
 #include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
-	: QMainWindow(parent), result(0.0)
+	: QMainWindow(parent), result(0.0) // Initializing 
 {
 	ui.setupUi(this);
 
@@ -70,6 +70,11 @@ void MainWindow::on_pushButton_nine_clicked()
 void MainWindow::on_pushButton_zero_clicked() 
 {
 	cur_text += '0';
+	ui.lineEdit->setText(cur_text);
+}
+void MainWindow:: on_pushButton_dot_clicked()
+{
+	cur_text += '.';
 	ui.lineEdit->setText(cur_text);
 }
 
